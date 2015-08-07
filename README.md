@@ -17,6 +17,9 @@ V2EX投放广告退款事件
  - [致 Livid:还原广告投放真相，请不要这么傻 X 了好吗？](https://www.v2ex.com/t/115368)
  - [最后一句！](https://www.v2ex.com/t/115372)
 
+私活干完不给钱事件
+- [八一次给 Leap Inno 干完活不给钱的接私活经历](https://v2ex.com/t/184818)
+- [诽谤事件处理请求](https://v2ex.com/t/210465)
 
 [V2EX]: https://v2ex.com/
 
