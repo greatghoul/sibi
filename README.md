@@ -45,6 +45,13 @@ V2EX投放广告退款事件 (2014.05)
  - [致 Livid:还原广告投放真相，请不要这么傻 X 了好吗？](https://www.v2ex.com/t/115368)
  - [最后一句！](https://www.v2ex.com/t/115372)
 
+----
+
+极路由剖腹事件 (2013.08)
+ - [极路由窃取用户信息，诸位小心！](https://www.v2ex.com/t/77921)
+ - [极路由事件后续](https://www.v2ex.com/t/77947)
+ - [极路由张导回复Chainkhoo的质疑](https://www.v2ex.com/t/77976)
+ - [不敢为产品剖腹的合伙人不是好的创业者](https://www.v2ex.com/t/78001)
 
 
 [V2EX]: https://v2ex.com/
