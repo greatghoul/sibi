@@ -9,7 +9,7 @@
  - [[吐槽] 教你如何刷 100offer 投票](https://www.v2ex.com/t/223240)
  - [100offer 刷票脚本](https://www.v2ex.com/t/222843)
  - [100 offer 自动答题 for JS](https://www.v2ex.com/t/223296)
- - [脚本高手进~~来为维基百科捐点钱](https://www.v2ex.com/t/223296)
+ - [脚本高手进~~来为维基百科捐点钱](https://www.v2ex.com/t/223082)
 
 ----
 
