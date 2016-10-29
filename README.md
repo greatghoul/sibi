@@ -2,7 +2,7 @@
 
 因为 [V2EX] 总是出现撕逼大战，所以专门开了这个 Repo 来收集这些帖子，但帖子的来源不限于 [V2EX]。
 
-![](http://greatghoul.b0.upaiyun.com/1610/9QjldBC2XrH5.jpeg)
+![](//greatghoul.b0.upaiyun.com/1610/9QjldBC2XrH5.jpeg)
 
 ----
 
