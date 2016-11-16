@@ -5,6 +5,8 @@
 ![](https://greatghoul.b0.upaiyun.com/1610/9QjldBC2XrH5.jpeg)
 
 ----
+被前东家发了律师函 (2016.11)
+- [我收到上家给我发的律师函了，该怎么办？](https://www.v2ex.com/t/320744)
 
 奇葩的 HR 和求职者 (2016.11)
 
@@ -73,7 +75,7 @@ minggejS 事件 (2015.12)
 
  - [反对 try{}catch (e){}的进来， B 君已经是全群公敌！](https://www.v2ex.com/t/246798)
  - [大家听说过 minggeJS 吗？看了介绍，好欢乐，我加了点弹幕(￣▽￣)"](https://www.v2ex.com/t/243333)
- 
+
 ----
 
 V2EX 泄露邮箱事件 (2015.12)
@@ -132,7 +134,7 @@ MOU 跳票事件 (2015.08)
  - [mou 又跳票?](https://www.v2ex.com/t/217348?p=1)
  - [看到了 V 站上讨论 Mou 的帖子，刚刚下载了 0.8.7 beta 版](https://www.v2ex.com/t/217429)
  - [Markdown 编辑器「Mou」1.0为什么推迟到 2015 年 8 月？(知乎)](http://www.zhihu.com/question/29357570)
- 
+
 ----
 
 UPYUN 存储免费事件 (2015.08)
