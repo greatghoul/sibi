@@ -6,6 +6,14 @@
 
 ----
 
+PHP TP 引战 Laraval (2016.12)
+
+- [来来来，学 Laraval 的，学 TP 的给你出一道简单的题](https://www.v2ex.com/t/331037)
+
+https://www.v2ex.com/t/331037
+
+----
+
 网购差评之争 (2016.12)
 
 - [天猫真的是匿名评论吗？](https://www.v2ex.com/t/327127)
