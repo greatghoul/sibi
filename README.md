@@ -27,6 +27,13 @@ PHP TP 引战 Laraval (2016.12)
 
 ----
 
+Y3Edge / NyaVM / 80Host 事件 (2016.11)
+
+- [被国人商家 80Host 坑惨了，仅以此文告诫那些想入坑的朋友](https://www.v2ex.com/t/320077)
+- [80host事件要大反转了 nyavm恐成最大赢家](http://www.hostloc.com/thread-338005-1-1.html?jdfwkey=suufm2)
+
+----
+
 奇葩的 HR 和求职者 (2016.11)
 
 - [分享一个面试中遇到的神 HR](https://www.v2ex.com/t/317982)
