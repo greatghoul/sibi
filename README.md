@@ -52,6 +52,7 @@ codevn 撕逼事件 (2016.10)
 程序员删代码被抓 (2016.05)
 
 - [程序员被称删代码，然后被抓到了派出所。写代码真是个危险的行业](http://web.archive.org/web/*/https://www.v2ex.com/t/278578)
+- [如何看待异乡好居老板娘控（wu）告程序员删代码？](https://www.zhihu.com/question/46294596)
 
 ----
 
