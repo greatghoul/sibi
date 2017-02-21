@@ -6,6 +6,12 @@
 
 ----
 
+真假 Space Vim 事件 (2017.02)
+
+- [SpaceVim 和 Space-Vim 哪个才是真的？](https://www.v2ex.com/t/337917)
+
+----
+
 PHP TP 引战 Laraval (2016.12)
 
 - [来来来，学 Laraval 的，学 TP 的给你出一道简单的题](https://www.v2ex.com/t/331037)
