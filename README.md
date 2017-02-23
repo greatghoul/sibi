@@ -6,6 +6,16 @@
 
 ----
 
+就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者 (2017.02)
+
+- [就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者](http://mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ)
+- [续 就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者](https://www.v2ex.com/t/342559)
+- [作为除当事人外最有权力发言的人，谈谈《就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者》](http://mp.weixin.qq.com/s/KFw_cEb9Wt0QVjJInKINBA)
+- [知情人士爆尿: 那个说自己老公一毛钱股份没拿到还觉得他最牛逼的谁 我真是大写加粗的呵呵哒了](http://mp.weixin.qq.com/s/es6yLwkNleHSQB7R5PF_JQ)
+- [怎么看《就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者》文中创业公司 CEO 的行为？](https://www.zhihu.com/question/56178614/answer/148217493)
+
+----
+
 真假 Space Vim 事件 (2017.02)
 
 - [SpaceVim 和 Space-Vim 哪个才是真的？](https://www.v2ex.com/t/337917)
