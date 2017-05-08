@@ -2,7 +2,7 @@
 
 因为 [V2EX] 总是出现撕逼大战，所以专门开了这个 Repo 来收集这些帖子，但帖子的来源不限于 [V2EX]。
 
-![](https://greatghoul.b0.upaiyun.com/1610/9QjldBC2XrH5.jpeg)
+![img](resources/img/9QjldBC2XrH5.jpeg)
 
 ----
 
@@ -22,10 +22,10 @@
 
 就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者 (2017.02)
 
-- [就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者](http://mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ)
+- [就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者](http://mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ)<!-- 由于robots.txt限制，archive.org无法收录该页，为保存页面,故将该页保存截屏于`resources/raw_web/mp_weixin_qq_com/C5aDa0pzoUGk6_4q-qKCaQ` -->
 - [续 就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者](https://www.v2ex.com/t/342559)
-- [作为除当事人外最有权力发言的人，谈谈《就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者》](http://mp.weixin.qq.com/s/KFw_cEb9Wt0QVjJInKINBA)
-- [知情人士爆尿: 那个说自己老公一毛钱股份没拿到还觉得他最牛逼的谁 我真是大写加粗的呵呵哒了](http://mp.weixin.qq.com/s/es6yLwkNleHSQB7R5PF_JQ)
+- [作为除当事人外最有权力发言的人，谈谈《就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者》](http://mp.weixin.qq.com/s/KFw_cEb9Wt0QVjJInKINBA)<!-- 由于robots.txt限制，archive.org无法收录该页，为保存页面,故将该页保存截屏于`resources/raw_web/mp_weixin_qq_com/KFw_cEb9Wt0QVjJInKINBA` -->
+- [知情人士爆尿: 那个说自己老公一毛钱股份没拿到还觉得他最牛逼的谁 我真是大写加粗的呵呵哒了](http://mp.weixin.qq.com/s/es6yLwkNleHSQB7R5PF_JQ)<!-- 由于robots.txt限制，archive.org无法收录该页，为保存页面,故将该页保存截屏于`resources/raw_web/mp_weixin_qq_com/es6yLwkNleHSQB7R5PF_JQ` -->
 - [怎么看《就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者》文中创业公司 CEO 的行为？](https://www.zhihu.com/question/56178614/answer/148217493)
 
 ----
@@ -51,7 +51,7 @@ PHP TP 引战 Laraval (2016.12)
 <a name="yunpian01"></a>云片员工离职事件 (2016.11)
 
 - [[杭州] 曝光一家黑心企业 杭州云片网络科技有限公司](https://ruby-china.org/topics/31027)
-- [关于一名离职员工散布云片不实言论的声明](https://blog.yunpian.com/?p=176 )_
+- [关于一名离职员工散布云片不实言论的声明](https://blog.yunpian.com/?p=176)
 - [云片的短信验证码昨天抽风了，导致我们损失了好多订单](https://www.v2ex.com/t/318064)
 - [我收到上家给我发的律师函了，该怎么办？](https://www.v2ex.com/t/320744)
 
@@ -67,8 +67,7 @@ Y3Edge / NyaVM / 80Host 事件 (2016.11)
 奇葩的 HR 和求职者 (2016.11)
 
 - [分享一个面试中遇到的神 HR](https://www.v2ex.com/t/317982)
-- [分享一个面试中遇到的神 HR(个人阐述下我所知道的情况)](https://www.v2ex.com/t/318239
-)
+- [分享一个面试中遇到的神 HR(个人阐述下我所知道的情况)](https://www.v2ex.com/t/318239)
 ----
 
 codevn 撕逼事件 (2016.10)
@@ -132,7 +131,7 @@ minggejS 事件 (2015.12)
 
  - [反对 try{}catch (e){}的进来， B 君已经是全群公敌！](https://www.v2ex.com/t/246798)
  - [大家听说过 minggeJS 吗？看了介绍，好欢乐，我加了点弹幕(￣▽￣)"](https://www.v2ex.com/t/243333)
- 
+
 ----
 
 V2EX 泄露邮箱事件 (2015.12)
@@ -191,7 +190,7 @@ MOU 跳票事件 (2015.08)
  - [mou 又跳票?](https://www.v2ex.com/t/217348?p=1)
  - [看到了 V 站上讨论 Mou 的帖子，刚刚下载了 0.8.7 beta 版](https://www.v2ex.com/t/217429)
  - [Markdown 编辑器「Mou」1.0为什么推迟到 2015 年 8 月？(知乎)](http://www.zhihu.com/question/29357570)
- 
+
 ----
 
 UPYUN 存储免费事件 (2015.08)
@@ -248,6 +247,7 @@ UPYUN 存储免费事件 (2015.08)
 
  - [讲一讲我八天婚假变成事假，最后变成八天旷工，被公司克扣工资然后辞退，还被发邮件威胁的事](https://v2ex.com/t/187486)
  - [买个便宜货 MGPYH.OM 南京爱多明信息技术有限公司 关于 QXX 童鞋事件 来龙去脉](https://v2ex.com/t/187543)
+ - [婚假变旷工事件，不得不说的两句](https://www.v2ex.com/t/187662)
 
 ----
 
