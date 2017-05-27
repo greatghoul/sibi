@@ -87,6 +87,8 @@ Y3Edge / NyaVM / 80Host 事件 (2016.11)
 - [80host事件要大反转了 nyavm恐成最大赢家](http://www.hostloc.com/thread-338005-1-1.html?jdfwkey=suufm2)
 
 ----
+被前东家发了律师函 (2016.11)
+- [我收到上家给我发的律师函了，该怎么办？](https://www.v2ex.com/t/320744)
 
 奇葩的 HR 和求职者 (2016.11)
 
