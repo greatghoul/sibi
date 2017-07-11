@@ -6,6 +6,13 @@
 
 ----
 
+Ruby China 对新手友好不友好？ (2017.07)
+
+- [我觉的 Ruby China 对新手不太友好](https://ruby-china.org/topics/33417)
+- [在学习 Rails 之后，有点想法想和大家分享一下](https://ruby-china.org/topics/33422)
+
+----
+
 少年黑客创业引发的撕逼大战 (2017.06)
 
  - [曾经的少年黑客，准备创业了。你们怎么看？](https://www.v2ex.com/t/369422)
