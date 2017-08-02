@@ -4,6 +4,20 @@
 
 ![img](resources/img/9QjldBC2XrH5.jpeg)
 
+---
+
+piwik 中国地图问题引发的争吵 (2017.08)
+
+- [piwik 把西藏从中国分裂出去，看来很快又要寸草不生了](https://www.v2ex.com/t/379794)
+
+---
+
+UCloud 推广费事件 (2017.07)
+
+- [关于 UCloud 赖账的 10 万 推广费，想请大家评评理](https://www.v2ex.com/t/377051)
+- [UCloud 关于 Laravist 社区事件的说明](https://www.v2ex.com/t/377158)
+- [关于之前的一件事情对社区的回应](https://www.v2ex.com/t/379389)
+
 ----
 
 Ruby China 对新手友好不友好？ (2017.07)
@@ -17,7 +31,7 @@ Ruby China 对新手友好不友好？ (2017.07)
 
  - [曾经的少年黑客，准备创业了。你们怎么看？](https://www.v2ex.com/t/369422)
  - [公布一个从事网络黑产、恶意骚扰别人的黑产大户](https://www.v2ex.com/t/369943)
- 
+
 ----
 
 培训班的争论 (2017.05)
