@@ -1,0 +1,1749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="Content-Type" content="text/html;charset=utf-8">
+    <meta name="Referrer" content="unsafe-url">
+	<meta content="True" name="HandheldFriendly">
+    <meta name="theme-color" content="#333344">
+	
+    <meta name="detectify-verification" content="d0264f228155c7a1f72c3d91c17ce8fb">
+<meta name="p:domain_verify" content="b87e3b55b409494aab88c1610b05a5f0">
+<meta name="alexaVerifyID" content="OFc8dmwZo7ttU4UCnDh1rKDtLlY">
+<meta name="baidu-site-verification" content="D00WizvYyr">
+<meta name="msvalidate.01" content="D9B08FEA08E3DA402BF07ABAB61D77DE">
+<meta property="wb:webmaster" content="f2f4cb229bda06a4">
+<meta name="google-site-verification" content="LM_cJR94XJIqcYJeOCscGVMWdaRUvmyz6cVOqkFplaU">
+    
+    <title>Phper 门，被一个循环难住了， help me！！！ - V2EX</title>
+    <link rel="dns-prefetch" href="https://static.v2ex.com/"><style type="text/css">img[src="//v2ex.assets.uxengine.net/assets/sidebar/ubnt_20170719.jpg"],
+img[src="//v2ex.assets.uxengine.net/assets/sidebar/mtyun_20170701.gif"],
+img[src="//v2ex.assets.uxengine.net/assets/sidebar/readhub_20160425.png"],
+img[src="//v2ex.assets.uxengine.net/assets/sidebar/leancloud_20170719.gif"],
+img[src="http://v2ex.assets.uxengine.net/assets/sidebar/yundashi_20170717.gif"],
+img[src="//v2ex.assets.uxengine.net/assets/sidebar/yunxinshi_20170717.gif"],
+img[src="//v2ex.assets.uxengine.net/friends/udacity/udacity_20170801.png"]
+{display:none !important;}</style>
+    <link rel="dns-prefetch" href="https://cdn.v2ex.com/">
+    <link rel="dns-prefetch" href="https://cdn.v2ex.co/">
+    <link rel="dns-prefetch" href="https://i.v2ex.co/">
+    <link rel="dns-prefetch" href="https://v2ex.assets.uxengine.net/">
+    
+        <link rel="stylesheet" type="text/css" media="screen" href="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/basic.css">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/desktop.css">
+    <link rel="stylesheet" href="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/tomorrow.css" type="text/css">
+    <script async="" src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/analytics.js"></script><script type="text/javascript" src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/highlight.js"></script>
+    <link rel="icon" sizes="192x192" href="https://www.v2ex.com/static/img/v2ex_192.png">
+    <link rel="shortcut icon" href="https://www.v2ex.com/static/img/icon_rayps_64.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/font-awesome.css">
+	<script src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/jquery_002.js" type="text/javascript"></script>
+	<script src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/jquery-ui.js" type="text/javascript"></script>
+	<script src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/jquery_003.js" type="text/javascript"></script>
+    <link href="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/jquery.css" rel="stylesheet">
+    <script src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/lscache.js" type="text/javascript"></script>
+    <script src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/v2ex.js" type="text/javascript"></script>
+    <link href="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/select2.css" rel="stylesheet">
+    <script src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/select2.js" type="text/javascript"></script>
+    <link href="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/selectboxit.css" rel="stylesheet">
+    <script src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/selectboxit.js" type="text/javascript"></script>
+    <meta name="description" content="水深火热 - @amlionone - 假如有 4 个数， 1,2,3,4在固定条件下，想用 php 循环输出这样能办到吗：11123334凌晨还有活的吗啊啊">
+    
+    
+    <link rel="canonical" href="https://www.v2ex.com/t/243145?p=2">
+    
+    
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    <meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Phper 门，被一个循环难住了， help me！！！ - V2EX">
+<meta property="og:description" content="水深火热 - @amlionone - 假如有 4 个数， 1,2,3,4在固定条件下，想用 php 循环输出这样能办到吗：11123334凌晨还有活的吗啊啊">
+<meta property="og:url" content="https://www.v2ex.com/t/243145">
+<meta property="og:site_name" content="V2EX">
+
+<meta property="article:tag" content="flamewar">
+<meta property="article:section" content="水深火热">
+<meta property="article:published_time" content="2015-12-12T20:38:00Z">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="水深火热 - @amlionone - 假如有 4 个数， 1,2,3,4在固定条件下，想用 php 循环输出这样能办到吗：11123334凌晨还有活的吗啊啊">
+<meta name="twitter:title" content="Phper 门，被一个循环难住了， help me！！！ - V2EX">
+<meta name="twitter:image" content="https://v2ex.assets.uxengine.net/gravatar/23c1f034b3fada58abd7a707e00ad162?s=73&amp;d=retro">
+<meta name="twitter:site" content="@V2EX">
+<meta name="twitter:creator" content="@V2EX">
+    <link rel="top" title="回到顶部" href="#">
+    <link rel="prev" title="Previous Page" href="https://www.v2ex.com/t/243145?p=1">
+    
+    <link rel="amphtml" href="https://www.v2ex.com/amp/t/243145">
+	<script>
+        var topicId = 243145;
+
+		$(function(){
+			protectTraffic();
+
+            $('#Main').on('click', '.no, .ago', function () {
+                location.hash = $(this).parents('.cell').prop('id');
+            });
+
+
+            
+
+            $('#reply_content').autosize().blur();
+
+            $("#reply_content").textcomplete([{
+                match: /(^|\s)@(\w*)$/,
+                search: function (term, callback) {
+                    term = term.toLowerCase();
+                    var words = ['187j3x1', '500miles', 'Athrob', 'JimmyCai', 'Kilerd', 'LINAICAI', 'Lentin', 'Moker', 'Niphor', 'Pastsong', 'SCaffrey', 'Slienc7', 'XianZaiZhuCe', 'ZyZyZzz', 'allan888', 'amlion', 'amlionone', 'amon', 'binux', 'br00k', 'bramblex', 'breeswish', 'ccc008', 'chalio', 'chinassl', 'ck65', 'edsgerlin', 'eliteYang', 'evakiss', 'falcon05', 'feiyuanqiu', 'gccdchen', 'guoziyan', 'happywowwow', 'hellogbk', 'hellov22ex', 'imgalaxy', 'imn1', 'jin5354', 'jugelizi', 'julyclyde', 'juneszh', 'k9982874', 'killerv', 'liuhaotian', 'liwanglin12', 'mantouge', 'mengzhuo', 'monkeymonkey', 'movtoy', 'msg7086', 'pynix', 'raincious', 'seki', 'snailsir', 'sosng', 'twor2', 'vCleaner', 'vibbow', 'wbolor', 'wd0g', 'willvvvv', 'wsph123', 'wxg4net', 'xufang', 'yernsun', 'zakokun', 'znlab'];
+                    callback($.map(words, function (word) {
+                        return word.toLowerCase().indexOf(term) === 0 ? word : null;
+                    }));
+                },
+                replace: function (value) {
+                    return '$1@' + value + ' ';;
+                }
+            }]);
+
+            
+
+            
+
+            
+
+            loadReplyDraft(243145, 229946);
+
+            
+		});
+
+        
+        var csrfToken = "wthnlgxykillqcsqkuslhwxrumxjgpjf";
+        
+	</script>
+    <script type="text/javascript">
+function format(tpl) {
+    var index = 1, items = arguments;
+    return (tpl || '').replace(/{(\w*)}/g, function(match, p1) {
+        return items[index++] || p1 || match;
+    });
+}
+function loadCSS(url, callback) {
+    return $('<link type="text/css" rel="stylesheet"/>')
+        .attr({ href: url })
+        .on('load', callback)
+        .appendTo(document.head);
+}
+function lazyGist(element) {
+    var $btn = $(element);
+    var $self = $(element).parent();
+    var $link = $self.find('a');
+    $btn.prop('disabled', 'disabled').text('Loading...');
+    $.getJSON(format('{}.json?callback=?', $link.prop('href').replace($link.prop('hash'), '')))
+        .done(function(data) {
+            loadCSS(data.stylesheet, function() {
+                $self.replaceWith(data.div);
+                $('.gist .gist-file .gist-meta a').filter(function() { return this.href === $link.prop('href'); }).parents('.gist-file').siblings().remove();
+            });
+        })
+        .fail(function() { $self.replaceWith($('<a>').attr('href', url).text(url)); });
+}
+</script>
+
+<style type="text/css">html, * {-moz-user-select:text!important;}</style></head>
+<body>
+    <div id="Top">
+        <div class="content">
+            <div style="padding-top: 6px;">
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tbody><tr>
+                    <td width="110" align="left"><a href="https://www.v2ex.com/" name="top" title="way to explore"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/logo2x.png" alt="V2EX" border="0" width="94" height="30" align="default"></a></td>
+                    <td width="auto" align="left">
+                        <div id="Search"><form action="https://www.google.com" onsubmit="return dispatch()" target="_blank"><div style="width: 276px; height: 28px; background-size: 276px 28px; background-image: url('/static/img/qbar_light@2x.png'); background-repeat: no-repeat; display: inline-block;"><input maxlength="40" name="q" id="q" type="text"></div></form></div>
+                    </td>
+                    <td style="padding-top: 2px;" width="570" align="right"><a href="https://www.v2ex.com/" class="top">首页</a>&nbsp;&nbsp;&nbsp;<a href="https://www.v2ex.com/member/coIoovo" class="top">coIoovo</a>&nbsp;&nbsp;&nbsp;<a href="https://workspace.v2ex.com/" target="_blank" class="top">工作空间</a>&nbsp;&nbsp;&nbsp;<a href="https://www.v2ex.com/notes" class="top">记事本</a>&nbsp;&nbsp;&nbsp;<a href="https://www.v2ex.com/t" class="top">时间轴</a>&nbsp;&nbsp;&nbsp;<a href="https://www.v2ex.com/settings" class="top">设置</a>&nbsp;&nbsp;&nbsp;<a href="#;" onclick="if (confirm('确定要从 V2EX 登出？')) { location.href= '/signout?once=79336'; }" class="top">登出</a></td>
+                </tr>
+            </tbody></table>
+            </div>
+        </div>
+    </div>
+    <div id="Wrapper">
+        <div class="content">
+            
+            <div id="Leftbar"></div>
+            <div id="Rightbar">
+                <div class="sep20"></div>
+                
+                    
+                    <div class="box">
+                        <div class="cell">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tbody><tr>
+                                    <td width="48" valign="top"><a href="https://www.v2ex.com/member/coIoovo"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/229946_large.png" class="avatar" style="max-width: 48px; max-height: 48px;" border="0" align="default"></a></td>
+                                    <td width="10" valign="top"></td>
+                                    <td width="auto" align="left"><span class="bigger"><a href="https://www.v2ex.com/member/coIoovo">coIoovo</a></span>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <div class="sep10"></div>
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tbody><tr>
+                                    <td width="33%" align="center"><a href="https://www.v2ex.com/my/nodes" class="dark" style="display: block;"><span class="bigger">0</span><div class="sep3"></div><span class="fade">节点收藏</span></a></td>
+                                    <td style="border-left: 1px solid rgba(100, 100, 100, 0.4); border-right: 1px solid rgba(100, 100, 100, 0.4);" width="34%" align="center"><a href="https://www.v2ex.com/my/topics" class="dark" style="display: block;"><span class="bigger">0</span><div class="sep3"></div><span class="fade">主题收藏</span></a></td>
+                                    <td width="33%" align="center"><a href="https://www.v2ex.com/my/following" class="dark" style="display: block;"><span class="bigger">0</span><div class="sep3"></div><span class="fade">特别关注</span></a></td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                        <div class="cell">
+                        <div style="width: 250px; background-color: #f0f0f0; height: 3px; display: inline-block; vertical-align: middle;"><div style="width: 46px; background-color: #ccc; height: 3px; display: inline-block;"></div></div>
+                        </div>
+                        
+                        <div class="cell" style="padding: 5px;">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tbody><tr>
+                                    <td width="32"><a href="https://www.v2ex.com/new"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/flat_compose.png" border="0" width="32"></a></td>
+                                    <td width="10"></td>
+                                    <td width="auto" valign="middle" align="left"><a href="https://www.v2ex.com/new">创作新主题</a></td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                        <div class="inner"><div class="fr" id="money"><a href="https://www.v2ex.com/balance" class="balance_area" style="">31 <img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/silver.png" alt="S" style="padding-bottom: 2px;" border="0" align="absmiddle"> 34 <img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/bronze.png" alt="B" border="0" align="absmiddle"></a></div><a href="https://www.v2ex.com/notifications" class="fade">0 条未读提醒</a></div>
+                        
+                    </div>
+                    
+                    
+
+    
+    <div class="sep20"></div>
+    <div class="box">
+        <div class="inner">
+            <span class="chevron">›</span> <a href="https://www.v2ex.com/t/121936">关于你的宝贵时间</a>
+<style type="text/css">
+#Wrapper {
+background-image: url("/static/img/shadow_light.png"), url("//static.v2ex.com/tiles/flamewar.png");
+background-repeat: repeat-x, repeat;
+}
+</style>
+            
+        </div>
+        
+    </div>
+    
+
+
+                    
+                    <div class="sep20"></div>
+                    <div class="box">
+    <div class="inner" align="center">
+        <a href="https://cn.udacity.com/fend/?utm_source=v2ex&amp;utm_medium=mainbanner&amp;utm_campaign=FEND06" target="_blank"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/udacity_20170801.png" alt="优达学城" style="display: none !important;" border="0" width="250" hidden="" height="250"></a>
+    </div>
+    <div class="sidebar_compliance" pn9b21s="" hidden=""><a href="https://www.v2ex.com/advertise" target="_blank">广告</a></div>
+</div>
+                    <div class="sep20"></div>
+                    
+                    
+                    
+                
+            </div>
+            <div id="Main">
+                <div class="sep20"></div>
+                
+<div class="box" style="border-bottom: 0px;">
+    <div class="header"><div class="fr"><a href="https://www.v2ex.com/member/amlionone"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/23c1f034b3fada58abd7a707e00ad162_002.png" class="avatar" border="0" align="default"></a></div>
+    <a href="https://www.v2ex.com/">V2EX</a> <span class="chevron">&nbsp;›&nbsp;</span> <a href="https://www.v2ex.com/go/flamewar">水深火热</a>
+    <div class="sep10"></div>
+    <h1>Phper 门，被一个循环难住了， help me！！！</h1>
+    <div id="topic_243145_votes" class="votes">
+<a href="javascript:" onclick="upVoteTopic(243145);" class="vote"><li class="fa fa-chevron-up"></li></a> &nbsp;<a href="javascript:" onclick="downVoteTopic(243145);" class="vote"><li class="fa fa-chevron-down"></li></a></div> &nbsp; <small class="gray"><a href="https://www.v2ex.com/member/amlionone">amlionone</a> · 2015-12-13 04:38:00 +08:00 · 4736 次点击 &nbsp; </small>
+    </div>
+    
+    
+    <div class="outdated">这是一个创建于 598 天前的主题，其中的信息可能已经有所发展或是发生改变。</div>
+    
+    
+    <div class="cell">
+        
+        <div class="topic_content"><div class="markdown_body"><p>假如有 4 个数， 1,2,3,4<br>
+在固定条件下，想用 php 循环输出这样能办到吗：<br>
+1<br>
+1<br>
+1<br>
+2<br>
+3<br>
+3<br>
+3<br>
+4<br>
+凌晨还有活的吗啊啊</p>
+</div></div>
+        <script>hljs.initHighlightingOnLoad();</script>
+        
+    </div>
+    
+    
+    <div class="topic_buttons"><div class="fr gray f11" style="line-height: 12px; padding-top: 3px; text-shadow: 0px 1px 0px #fff;">4736 次点击 &nbsp;∙&nbsp; 8 人收藏 &nbsp; </div><a href="https://www.v2ex.com/favorite/topic/243145?t=wthnlgxykillqcsqkuslhwxrumxjgpjf" class="tb">加入收藏</a> &nbsp;<a href="#;" onclick="window.open('https://twitter.com/share?url=https://www.v2ex.com/t/243145?r\u003DcoIoovo&amp;related=v2ex&amp;hashtags=flamewar&amp;text=Phper 门，被一个循环难住了， help me！！！', '_blank', 'width=550,height=370'); recordOutboundLink(this, 'Share', 'twitter.com');" class="tb">Tweet</a> &nbsp;<a href="#;" onclick="window.open('http://service.weibo.com/share/share.php?url=https://www.v2ex.com/t/243145?r\u003DcoIoovo&amp;title=V2EX%20-%20Phper 门，被一个循环难住了， help me！！！', '_blank', 'width=550,height=370'); recordOutboundLink(this, 'Share', 'weibo.com');" class="tb">Weibo</a> &nbsp;<a href="#;" onclick="if (confirm('确定不想再看到这个主题？')) { location.href = '/ignore/topic/243145?once=79336'; }" class="tb">忽略主题</a> &nbsp;<div id="topic_thank"><a href="#;" onclick="if (confirm('你确定要向本主题创建者发送谢意？')) { thankTopic(243145, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="tb">感谢</a></div></div>
+</div>
+
+<div class="sep20"></div>
+
+
+<div class="box">
+    <div class="cell"><div class="fr" style="margin: -3px -5px 0px 0px;"><a href="https://www.v2ex.com/tag/PHPer" class="tag"><li class="fa fa-tag"></li> PHPer</a><a href="https://www.v2ex.com/tag/%E5%BE%AA%E7%8E%AF" class="tag"><li class="fa fa-tag"></li> 循环</a><a href="https://www.v2ex.com/tag/PHP" class="tag"><li class="fa fa-tag"></li> PHP</a><a href="https://www.v2ex.com/tag/%E5%8A%9E%E5%88%B0" class="tag"><li class="fa fa-tag"></li> 办到</a></div><span class="gray">156 回复 &nbsp;<strong class="snow">|</strong> &nbsp;直到 2015-12-14 20:24:18 +08:00</span>
+    </div>
+    
+    
+<div class="cell">
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody><tr>
+            <td width="92%" align="left"><a href="https://www.v2ex.com/t/243145?p=1" class="page_normal">1</a> &nbsp;<a href="https://www.v2ex.com/t/243145?p=2" class="page_current">2</a> &nbsp; <input class="page_input" autocomplete="off" value="2" min="1" max="2" onkeydown="if (event.keyCode == 13)
+                    location.href = '?p=' + this.value" type="number"></td>
+            <td width="8%" align="right">
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <style type="text/css">
+                        .disable_now {
+                            color: #ccc !important;
+                            background-color: #fff !important;
+                        }
+                        .hover_now {
+                            cursor: pointer;
+                            color: #333 !important;
+                            background-color: #f9f9f9 !important;
+                            text-shadow: 0px 1px 0px #fff !important;
+                        }
+                        .active_now {
+                            background-color: #e2e2e2 !important;
+                        }
+                    </style>
+                    <tbody><tr>
+                        <td class="super normal button" style="border-right: none; border-top-right-radius: 0px; border-bottom-right-radius: 0px;" onclick="location.href='?p=1';" onmouseover="$(this).addClass('hover_now');" onmousedown="$(this).addClass('active_now');" onmouseleave="$(this).removeClass('hover_now'); $(this).removeClass('active_now');" title="上一页" width="50%" align="center">❮</td>
+                        <td class="super normal_page_right button disable_now" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" width="50%" align="center">❯</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+
+    
+
+    
+        
+        
+        <div id="r_2719386" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/38436_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719386" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @msg7086 的这条回复？')) { ignoreReply(2719386, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @msg7086 的这条回复发送感谢？')) { thankReply(2719386, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('msg7086');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">101</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/msg7086" class="dark">msg7086</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:04:26 +08:00</span>  &nbsp; <span class="small fade">♥ 1</span>
+                    <div class="sep5"></div>
+                    <div class="reply_content">当你自己不对别人表现出尊重的时候，还要别人来尊重你。
+<br>请问你表现得这么 JJ 见个人就往他头上爬，你当自己是老几。
+<br>建议你圆润地离开这个你觉得别人不爽，别人也觉得你不爽的地方，免得我们污染了你的眼睛。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719388" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/23c1f034b3fada58abd7a707e00ad162.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719388" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlionone 的这条回复？')) { ignoreReply(2719388, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlionone 的这条回复发送感谢？')) { thankReply(2719388, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlionone');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">102</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlionone" class="dark">amlionone</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:04:30 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/monkeymonkey">monkeymonkey</a> 激怒了吗？我对你说一个言传身教就是激怒？我对你说睁大眼睛就是激怒？你前边说我对 @<a href="https://www.v2ex.com/member/ccc008">ccc008</a> 时候看没看到 6 楼我对 @<a href="https://www.v2ex.com/member/ccc008">ccc008</a> 的解释？当你把我定性为“态度”很成问题的时候，请问你是怎么样一种心理状态呢？</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719396" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/23c1f034b3fada58abd7a707e00ad162.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719396" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlionone 的这条回复？')) { ignoreReply(2719396, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlionone 的这条回复发送感谢？')) { thankReply(2719396, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlionone');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">103</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlionone" class="dark">amlionone</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:07:23 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/msg7086">msg7086</a> 你说的这些根据在哪里，睁着眼睛说瞎话屁股疼吗？我眼睛疼</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719402" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/23c1f034b3fada58abd7a707e00ad162.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719402" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlionone 的这条回复？')) { ignoreReply(2719402, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlionone 的这条回复发送感谢？')) { thankReply(2719402, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlionone');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">104</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlionone" class="dark">amlionone</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:09:17 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/msg7086">msg7086</a> 话说没见你多圆润的说话，要撕逼找理由啊，一条一条的反驳我啊，你要真能把我驳倒，我二话不说夹着腚，如果不能，请你夹着腚，免的臭屁出来污了别人的鼻子！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719411" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/38436_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719411" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @msg7086 的这条回复？')) { ignoreReply(2719411, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @msg7086 的这条回复发送感谢？')) { thankReply(2719411, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('msg7086');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">105</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/msg7086" class="dark">msg7086</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:11:34 +08:00</span>  &nbsp; <span class="small fade">♥ 1</span>
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/amlionone">amlionone</a> 如果你没有办法发现或者理解自己的无礼之处，我还是建议你不要再浪费时间了。
+<br>右上角有一个登出按钮，点一下，然后再右上角有一个关闭按钮，再点一下，大家都轻松。
+<br>当然还有一个选择是继续用这个态度回帖，直到 @<a href="https://www.v2ex.com/member/sparanoid">sparanoid</a> 或者 @<a href="https://www.v2ex.com/member/livid">livid</a> 中的一位直接将你禁言为止。
+<br>友情提醒，攻击其他会员或者说粗话脏话可以让你更快地吃到禁言，你不妨试一下。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719423" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/38436_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719423" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @msg7086 的这条回复？')) { ignoreReply(2719423, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @msg7086 的这条回复发送感谢？')) { thankReply(2719423, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('msg7086');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">106</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/msg7086" class="dark">msg7086</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:14:40 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">对了，再告诉你一句，我已经把你屏蔽了，所以以后你任何的发言我都不会收到，也不会回复，所以嘴有多脏可以尽管吐，不会对我有影响的。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719431" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/125983_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719431" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @500miles 的这条回复？')) { ignoreReply(2719431, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @500miles 的这条回复发送感谢？')) { thankReply(2719431, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('500miles');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">107</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/500miles" class="dark">500miles</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:16:31 +08:00</span>  &nbsp; <span class="small fade">♥ 1</span>
+                    <div class="sep5"></div>
+                    <div class="reply_content">我自己发起提问的时候, 心理活动 和 实际行动 大概是这样的 : 
+<br>
+<br>1. 非常渴望能得到大牛指点,  内心是充满期许的;
+<br>
+<br>2. 是在请别人帮忙, 是请教.  这会占用别人时间精力, 自己会感到不好意思,  会想着如何报答.
+<br>
+<br>3. 为了不耽搁别人时间, 为了引起别人兴趣,  也为了快点解决.   我会反复斟酌,  使描述足够清楚.  '的',  '了'等语气助词也一再增删..  描述较长时, 注意层次递进, 不使用超长句;  
+<br>总之一句话,  最起码先过了自己这一关  : 读起来舒心 不费力 .
+<br>
+<br>4. 除了整体连贯 通顺的阅读体验,   我会尽力突出重点 : 什么样的问题?  疑惑在哪里?  希望得到怎样的帮助? ......
+<br> 
+<br>5. 提问之前, 我会仔细搜索, 仔细思考 .   大部分一时不解的问题, 自己天天惦记着, 困惑几天, 几周.  往往能够探索明白, 而探索的路上 自己也收获更多.
+<br>
+<br>6 因此 但凡不是很紧急 或是 困惑许久不得解的问题  我是不会发起提问的.  因此, 我很少发起提问
+<br>
+<br>7 迫不得已发起提问, 我会表达出自己探索所做的努力, 表达出应有的诚意, 尊重. 
+<br> 谦逊的请教  而绝非大大咧咧  大呼小叫.  
+<br>难免会遇到情绪高涨的朋友, 就算被回帖嘲讽几句, 只要不是无理攻击, 也应谦逊的谢谢别人的提醒. 
+<br>毕竟这不是在发起讨论 而是 发起提问, 请教.</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719435" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/23c1f034b3fada58abd7a707e00ad162.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719435" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlionone 的这条回复？')) { ignoreReply(2719435, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlionone 的这条回复发送感谢？')) { thankReply(2719435, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlionone');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">108</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlionone" class="dark">amlionone</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:17:55 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/msg7086">msg7086</a>
+ 
+行啊，禁言也好，受不了你们这些开启“圣人”模式的机关枪嘴皮子。我发现你们这些“圣人”比古时候“烟管遇屎”都厉害啊！如果你没有办法发现或者理解自己
+的无礼之处，我还是建议你不要再浪费时间了。 
+右上角有一个登出按钮，点一下，然后再右上角有一个关闭按钮，再点一下，大家都轻松。这句话我同样送给你。当然你也可以选择继续用着态度回帖，但是请下次
+回帖一定要一条一条的找到“正确”的理由反驳我好吗？
+<br>直到 @<a href="https://www.v2ex.com/member/sparanoid">sparanoid</a> 或者 @<a href="https://www.v2ex.com/member/livid">livid</a> 中的一位直接将我禁言为止。 
+<br>友情提醒，对待没有确切理由，擅自评价别人擅自说教别人的，我一律进行粗话回应。你不妨试一下</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719436" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/23c1f034b3fada58abd7a707e00ad162.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719436" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlionone 的这条回复？')) { ignoreReply(2719436, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlionone 的这条回复发送感谢？')) { thankReply(2719436, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlionone');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">109</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlionone" class="dark">amlionone</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:18:41 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/msg7086">msg7086</a> 感谢屏蔽，我的世界清静了一分，您就不应该“屈尊”进来！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719453" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/23c1f034b3fada58abd7a707e00ad162.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719453" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlionone 的这条回复？')) { ignoreReply(2719453, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlionone 的这条回复发送感谢？')) { thankReply(2719453, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlionone');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">110</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlionone" class="dark">amlionone</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:24:20 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/500miles">500miles</a> 谢谢指正！
+<br>可能我就是因为太不想耽误别人时间，或者太像用简单的描述让大家理解我的提问，反而造成的描述太简单而不清晰的问题。我一般很少提问，此问题是困
+扰我 1 
+天的问题，因为此问题关系到我解决下一个问题的解决思路！对于有技术，废话少，不装逼，我的内心是非常钦佩的!同时也只能在内心里默默感谢，顺便送个谢
+谢！但是，-----碰到被嘲讽-----，------而且是装逼者的嘲讽-----，------而且是不解决问题装逼者的嘲讽------，(你倒
+是解决了再嘲讽我菜啊，我认了)，我是万万不能容忍的。不帮助别人也罢了，这是自愿行为，嘲讽别人来的快感爽吗？我就问问他们！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719456" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/125983_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719456" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @500miles 的这条回复？')) { ignoreReply(2719456, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @500miles 的这条回复发送感谢？')) { thankReply(2719456, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('500miles');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">111</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/500miles" class="dark">500miles</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:25:27 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">另外, 这个标题恐怕是  又加固了 php 世界霸主的地位 
+<br>
+<br>尽管这问题和 php 关系不大.
+<br>
+<br>好吧 ...  php 表示 锅很多了 不差这一个.</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719461" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/3bfa43fc0eb53339f5caa1e555bc95aa.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719461" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @yernsun 的这条回复？')) { ignoreReply(2719461, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @yernsun 的这条回复发送感谢？')) { thankReply(2719461, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('yernsun');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">112</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/yernsun" class="dark">yernsun</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:26:19 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/amlionone">amlionone</a> 
+<br>你真应该感谢下
+<br>@<a href="https://www.v2ex.com/member/monkeymonkey">monkeymonkey</a> 
+<br>技术问题还可以通过时间解决，个人问题恐怕就难了，作为伸手党！一个成年人，对别人基本的尊重都没有，还妄想别人尊重你？当前这个社会只会尊重那些有素养有能力的人</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719462" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/23c1f034b3fada58abd7a707e00ad162.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719462" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlionone 的这条回复？')) { ignoreReply(2719462, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlionone 的这条回复发送感谢？')) { thankReply(2719462, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlionone');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">113</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlionone" class="dark">amlionone</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:26:45 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/500miles">500miles</a> 确实关系不大，当初写标题的时候，因为是在写 php 当中遇到的问题，所以为了醒目，就提了个 php~</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719464" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/23c1f034b3fada58abd7a707e00ad162.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719464" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlionone 的这条回复？')) { ignoreReply(2719464, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlionone 的这条回复发送感谢？')) { thankReply(2719464, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlionone');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">114</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlionone" class="dark">amlionone</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:27:50 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/yernsun">yernsun</a> 请单独指出，你挑我毛病，别指望我对你好言好语，不跟你废话，来，单独指出</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719466" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/40860_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719466" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @juneszh 的这条回复？')) { ignoreReply(2719466, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @juneszh 的这条回复发送感谢？')) { thankReply(2719466, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('juneszh');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">115</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/juneszh" class="dark">juneszh</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:29:46 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">一个简单的问题, 花了 12 小时仍然没有有效解决, 还乐此不彼地群嘲当道德高地斗士
+<br>真是愚蠢到不可救药
+<br>
+<br>-&gt;系统已对此人生成以下标签:
+<br>-&gt;表达能力欠缺 过于浮躁 不善于总结 性格存在缺陷 毫无执行力 工作极易受情绪影响 不值得帮忙</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719496" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/b5ce5a1bb15e33f4a7af1d44f2f89767.jpe" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719496" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @JimmyCai 的这条回复？')) { ignoreReply(2719496, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @JimmyCai 的这条回复发送感谢？')) { thankReply(2719496, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('JimmyCai');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">116</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/JimmyCai" class="dark">JimmyCai</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:45:06 +08:00 via Android</span>  &nbsp; <span class="small fade">♥ 1</span>
+                    <div class="sep5"></div>
+                    <div class="reply_content">V 站💊</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719520" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/42303_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719520" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @imgalaxy 的这条回复？')) { ignoreReply(2719520, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @imgalaxy 的这条回复发送感谢？')) { thankReply(2719520, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('imgalaxy');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">117</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/imgalaxy" class="dark">imgalaxy</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:50:51 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content"><a target="_blank" href="http://pastebin.ubuntu.com/13986637/" rel="nofollow">http://pastebin.ubuntu.com/13986637/</a>
+<br>我只发个思路 继续围观撕逼</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719528" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/3bfa43fc0eb53339f5caa1e555bc95aa.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719528" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @yernsun 的这条回复？')) { ignoreReply(2719528, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @yernsun 的这条回复发送感谢？')) { thankReply(2719528, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('yernsun');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">118</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/yernsun" class="dark">yernsun</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:54:18 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">贴 lz 的另外两个链接吧：
+<br>知乎： <a target="_blank" href="http://www.zhihu.com/question/28339815" rel="nofollow">http://www.zhihu.com/question/28339815</a>
+<br>V 站马甲： Vzhttps://www.v2ex.com/t/172473
+<br>看完这个，我表示有点理解 lz 了，个人经历外加有点小背景，自我有点膨胀还算正常。这次没有歧视的意思。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719537" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/91423_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719537" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @sosng 的这条回复？')) { ignoreReply(2719537, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @sosng 的这条回复发送感谢？')) { thankReply(2719537, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('sosng');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">119</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/sosng" class="dark">sosng</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 16:56:50 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">看了半天应该是 segmentfault 请过来的😂</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719550" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/116983_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719550" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @chinassl 的这条回复？')) { ignoreReply(2719550, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @chinassl 的这条回复发送感谢？')) { thankReply(2719550, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('chinassl');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">120</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/chinassl" class="dark">chinassl</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 17:00:35 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">好了，编程我不懂，但就楼主这个态度问题，我感觉就不要深究了，也许很好的人说话语气不太好，每个人都有每个人的为人处事方法，也无须一味指责，感觉楼主太多不好或问题方式很不爽，直接 XXX 关闭走人好了，不要动怒，也有大度者不拘小节，就指点迷津，就这样！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719605" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/67970_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719605" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @Athrob 的这条回复？')) { ignoreReply(2719605, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @Athrob 的这条回复发送感谢？')) { thankReply(2719605, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('Athrob');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">121</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/Athrob" class="dark">Athrob</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 17:16:25 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">路过...</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719656" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/9467_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719656" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @twor2 的这条回复？')) { ignoreReply(2719656, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @twor2 的这条回复发送感谢？')) { thankReply(2719656, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('twor2');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">122</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/twor2" class="dark">twor2</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 17:35:48 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">LOL 不服单挑</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719662" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/81626_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719662" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @Kilerd 的这条回复？')) { ignoreReply(2719662, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @Kilerd 的这条回复发送感谢？')) { thankReply(2719662, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('Kilerd');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">123</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/Kilerd" class="dark">Kilerd</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 17:38:09 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">&gt; 可见 V 站风气一天不如一天，我也发现好多人发帖讨论”无端撕逼“的，但也在情理之中，我不是玻璃心，那些喜欢撕逼的”渣渣“对我没有任何影响，我伤心的是 V 站众素质下降，看来以后也不用多来了，人虽多，还不如 SegmentFault ！
+<br>
+<br>哈哈，容我先笑一下，问题解决的方法前面的人已经解决了。
+<br>` V 站风气一天不如一天`， `V 站众素质下降`
+<br>这一点，我觉得就是因为 过多新人涌进 V2EX ，并且没看过提问的智慧，还十分倔强
+<br>
+<br>当然这里并不是在特指你。
+<br>
+<br>首先吧，你的问题表述得十分不完善，前几楼的小伙伴都在回应这个问题，而你的态度真的让人很心寒。
+<br>大家都是素未谋面，帮助你并且回答你的问题并不是大伙的义务。你恶言相对，佛都有火吧。
+<br>
+<br>BTW 。 相信在众多人眼中，非默认头像的人会自动在脑中加权重的，先去弄一个头像吧，即使是马甲</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719692" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719692" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719692, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719692, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">124</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 17:51:07 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/Kilerd">Kilerd</a> 谢谢
+<br>@<a href="https://www.v2ex.com/member/twor2">twor2</a> 来
+<br>@<a href="https://www.v2ex.com/member/chinassl">chinassl</a> 说的对
+<br>@<a href="https://www.v2ex.com/member/sosng">sosng</a> 2333
+<br>@<a href="https://www.v2ex.com/member/imgalaxy">imgalaxy</a> 谢谢
+<br>@<a href="https://www.v2ex.com/member/juneszh">juneszh</a> 你我就不想多说了。谁才是道德圣斗士？你这不是道德的圣斗士给我这个道德的圣斗士乱贴标签？以后别碰到新手问问题，回答的时候不管解决没解决问题，一定要嘲讽他，切记！
+<br>
+<br>@<a href="https://www.v2ex.com/member/yernsun">yernsun</a> 这位仁兄加我 QQ 聊了聊，没有了论坛“嘈杂”“起哄”的气氛，彼此不在唇枪舌剑，顿时失去了继续评论下去的兴趣。我特么也是傻，一群俗人傻了吧唧的吵个没完，各自公断，此贴已结！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719701" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719701" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719701, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719701, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">125</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 17:53:25 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">小号单天评论回复数封顶，特此另开号终结。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719727" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/147365_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719727" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @evakiss 的这条回复？')) { ignoreReply(2719727, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @evakiss 的这条回复发送感谢？')) { thankReply(2719727, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('evakiss');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">126</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/evakiss" class="dark">evakiss</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 18:03:17 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">&lt;?php
+<br>echo '1&lt;br/&gt;
+<br>1&lt;br/&gt;
+<br>1&lt;br/&gt;
+<br>2&lt;br/&gt;
+<br>3&lt;br/&gt;
+<br>3&lt;br/&gt;
+<br>3&lt;br/&gt;
+<br>4&lt;br/&gt;
+<br>';
+<br>?&gt;</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719733" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/40860_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719733" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @juneszh 的这条回复？')) { ignoreReply(2719733, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @juneszh 的这条回复发送感谢？')) { thankReply(2719733, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('juneszh');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">127</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/juneszh" class="dark">juneszh</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 18:05:51 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">一直把自己往"新手"上靠, 除了为了博得同情, 看不到任何新手应有的学习态度
+<br>
+<br>你真以为全世界都是你妈</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719734" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/86480_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719734" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @hellogbk 的这条回复？')) { ignoreReply(2719734, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @hellogbk 的这条回复发送感谢？')) { thankReply(2719734, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('hellogbk');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">128</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/hellogbk" class="dark">hellogbk</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 18:05:56 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">楼主的这个贴子我一大早就看到了，不过并没有进行回复，原因就是真的看不懂你的问题是什么。所以楼主问问题的水平确实有待提高，当然这也可能是因为楼主目前的技术水平使得你不知道该怎么描述你的问题。
+<br>
+<br>这里我并不说楼主的态度是不是有问题，而是想说一说为什么多数人会觉得楼主的态度有问题。
+<br>
+<br>在提问的时候，请尽量使用一些可以表达你态度谦虚的词汇，就像上面很多人说过的，既然提问，你就是希望能有人抽出他们自己的时间来帮你解答你的疑
+惑，就冲这一点，请心怀感激并保持谦虚，不会有人成心找你的事。还有请尽量少用或者不要用如你之前在回复中使用的一些类似 “醉了” 
+这样的词。原因在于每个人对于这样的词汇的理解是不一样的，你觉得样用词没什么不妥，可是并不是所有人会这么想，就我个人而言我也不喜欢 “醉了” 
+这个用法，我至今依然很讨厌 “我也是醉了” 这种说法。 如果我用心回答完一个问题后发现问问题的人给我回答一句醉了，我没准也会想 “这 TM 
+的什么意思？这是在抱怨我回答的不好浪费他的时间了？”
+<br>
+<br>这个贴子的争执就是从“醉了”开始的，楼主觉得自己自己并没有态度的问题而是无端遭到了指责并开始回击，但是这种情况下的回击只能让你显得你确实
+不谦虚。楼主也许自己真的认为自己没有态度上的问题，但是在发现自己的态度被人误解后，请耐心解释一下，就算发个“不好意思让你误会了” 
+之类的话，也不会出现后面这么多的撕逼了。
+<br>
+<br>
+<br>语文没学好，胡言乱语两句可能没有什么逻辑，不要见怪。
+<br>：）</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719782" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/40860_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719782" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @juneszh 的这条回复？')) { ignoreReply(2719782, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @juneszh 的这条回复发送感谢？')) { thankReply(2719782, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('juneszh');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">129</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/juneszh" class="dark">juneszh</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 18:20:39 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/hellogbk">hellogbk</a> 同意你的说法，其实同样的观点早就有人回了，只是楼主将这定性为“撕逼”。
+<br>
+<br>相比楼主,，你的语文水平可以拿文学奖了。
+<br>
+<br>无知、自尊心极强、可悲，总是会同时出现。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719818" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/60889_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719818" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amon 的这条回复？')) { ignoreReply(2719818, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amon 的这条回复发送感谢？')) { thankReply(2719818, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amon');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">130</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amon" class="dark">amon</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 18:38:46 +08:00 via iPhone</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">好久没看到这么纯正的屌丝了，谢谢让我们开眼。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719819" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/8105_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719819" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @binux 的这条回复？')) { ignoreReply(2719819, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @binux 的这条回复发送感谢？')) { thankReply(2719819, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('binux');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">131</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/binux" class="dark">binux</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 18:39:01 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">怎么一觉起来变成这样了啊？！
+<br>
+<br>我只是觉得这种现象在初学者中非常常见，就是没理由的省略提问的信息。比如报错的时候省略栈只给 Exception 。比如这里的，将大段 html 省略为 1234 。回顾 LZ 的帖子，将非常多信息省略为自己并不了解的一两个概念或者词。
+<br>我就想知道，作为一个初学者，凭什么知道哪些信息是可以被省略的？
+<br>
+<br>就算你省略了吧，有人回复说是基于奇偶规则，就算你原本并不是数字，奇偶规则也已经很明显了吧，自己实现计数器不就好了。好好好，就算你没反应过来，别人根据你给的信息猜你要干什么，你还「醉了」埋怨别人不理解。
+<br>能理解才有鬼了！你付咨询费了吗，凭什么要一句句猜你要说什么？猜错还要被埋怨，跟吃了 si 一样。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719849" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719849" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719849, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719849, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">132</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 18:55:45 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/juneszh">juneszh</a>
+ 
+我本来不想回复的，要攻击我请攻击我，别带上别人的家属。下次一旦看见，直接开喷，什么玩意。是不是撕逼你心里清楚，我早就解释误会了，自己不看楼层只怪
+你 B 眼张在 P 
+眼上。可是一直有人挑事，我是不是无知不是靠单单这个问题能看出来的，怎么，不会写代码就是无知了？我觉得你才是可悲。话说跟这么多人回复了，为啥单单就
+你我最最看不惯呢？你能别进来了吗？别回复了吗？直接拉黑！
+<br>@<a href="https://www.v2ex.com/member/hellogbk">hellogbk</a> 回答的最贴合实际的一个，就是从醉了开始的。可是我从 6#楼已经解释了，我没有任何不尊敬的意思，是下边的人一个接一个的嘲讽！，就比如 @<a href="https://www.v2ex.com/member/juneszh">juneszh</a> ，这都能让你牵扯出一堆大道理，回家讲给你妈听好吗。看见你就便秘，拉不出屎来。老子这么多人谁都不骂，就骂你！
+<br>@<a href="https://www.v2ex.com/member/amon">amon</a> 我是屌丝，您是高富帅。我也开眼，谢谢！
+<br>@<a href="https://www.v2ex.com/member/binux">binux</a> 您的逻辑比 @<a href="https://www.v2ex.com/member/hellogbk">hellogbk</a> 差远了，您也是吃了屎了吗？你说的哪句话不是恶意揣测别人，我醉了就是埋怨？你连 6 楼都没看过你就敢大言不惭的来此高谈阔论继续挑事，你这屎吃的不少啊！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719856" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719856" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719856, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719856, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">133</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 18:57:18 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">我再说一句，此贴终结！别没事找事，有想法心里公断去，爱咋骂咋骂，没功夫陪你 BB ！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719862" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719862" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719862, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719862, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">134</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:03:38 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">再加一句，大家都擦亮眼看着，我明显不想继续纠缠这些没营养的话题。
+<br>希望不要有任何一个人再来进行评论！此话过后，没有任何一句好话，直接喷！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719880" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/40860_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719880" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @juneszh 的这条回复？')) { ignoreReply(2719880, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @juneszh 的这条回复发送感谢？')) { thankReply(2719880, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('juneszh');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">135</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/juneszh" class="dark">juneszh</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:09:32 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">说了结贴还回来喷，真是欢乐的小丑
+<br>
+<br>此帖已收藏，经典案例，打算以后遇到类似的就直接转这个“看看这家伙的下场”</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719886" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719886" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719886, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719886, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">136</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:11:44 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/juneszh">juneszh</a> 都已经终结了还尼玛比提到别人的母亲，还接着嘲讽别人，尼玛比真是欠草，生下你这么个带绿毛的龟儿子，咋，你爸爸是吓大的？都来看，你尼玛比你接着回，老子秒回你！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719894" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/77379_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719894" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @jin5354 的这条回复？')) { ignoreReply(2719894, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @jin5354 的这条回复发送感谢？')) { thankReply(2719894, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('jin5354');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">137</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/jin5354" class="dark">jin5354</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:20:29 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">哈哈哈， lz 刚正面，十分勇猛啊</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719898" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719898" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719898, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719898, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">138</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:21:52 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/jin5354">jin5354</a> 明显不想继续了，还没完没了的咬，这种人就是欠草，狗玩意。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719908" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/40860_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719908" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @juneszh 的这条回复？')) { ignoreReply(2719908, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @juneszh 的这条回复发送感谢？')) { thankReply(2719908, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('juneszh');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">139</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/juneszh" class="dark">juneszh</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:26:46 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">挺佩服楼主的理解能力，一句“你真以为全世界都是你妈”可以解读为说他家属
+<br>
+<br>这么跳跃的思维其实不太合适写程序呢
+<br>
+<br>让我想起了之前的“开水浇顾客”的火锅店服务员新闻，顾客一句“你他妈以为自己是谁”可以判断为问候其家人</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719910" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719910" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719910, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719910, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">140</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:30:12 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/juneszh">juneszh</a> 写尼玛比程序，尼玛比连话都看不懂没完没了的继续咬你爹你就是适合写程序了？看你那头像跟个龟头一样，一看你就不是什么好东西。你他妈来你爹这找存在感了？你爹让你存在个够！你真以为全世界都是你妈，我可不让着你，傻逼</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719917" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719917" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719917, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719917, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">141</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:33:29 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/juneszh">juneszh</a> 说别人之前首先把腚擦干净，自己什么货色也来有资格对你爹大呼小叫肆意评论！你个傻逼既然赞同 @<a href="https://www.v2ex.com/member/hellogbk">hellogbk</a> 说的，你特么先向人家学习学习说句人话好吗？真还舔这个 B 脸没完没了的纠缠，你他妈逼也是拼，不过不够，你懂么</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719921" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719921" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719921, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719921, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">142</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:36:11 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/juneszh">juneszh</a> 你爹抗煞笔能力 100%，@hellogbk 比你的语文都他麻痹都能拿诺贝尔奖了，老子不是新手是老手吗？老手会受你这种傻逼的闲气？态度尼玛比，态度不是给你这种傻逼嘲讽看的，见了你这种煞笔直接问候你全家，不服你继续跟着，老子让他们也看看你这种傻逼的下场</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719924" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719924" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719924, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719924, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">143</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:39:54 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">再加一句，大家都擦亮眼看着，我明显不想继续纠缠这些没营养的话题。 
+<br>希望不要有任何一个人再来进行评论！此话过后，没有任何一句好话，直接喷！
+<br>
+<br>你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719930" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/77379_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719930" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @jin5354 的这条回复？')) { ignoreReply(2719930, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @jin5354 的这条回复发送感谢？')) { thankReply(2719930, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('jin5354');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">144</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/jin5354" class="dark">jin5354</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:41:48 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">lz 别喷啦，消消气。
+<br>
+<br>我知道你提问态度还是很端正的，从 2 楼和 6 楼可以看出来；不过你语言比较情绪化，“醉了”，“ 2333 
+”，错字，很多感叹号，咱们年轻人也许能互相理解，但是 v2 
+上还是有些人不好这口的，尤其是不看动画的，年纪比较大的有经验的前辈，会认为你说法随意，态度轻浮，你也得注意一下。
+<br>
+<br>不过 v2 有些人说话确实太刺了，挺呛人的。。希望大家说话都平和一点吧</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719932" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/77379_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719932" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @jin5354 的这条回复？')) { ignoreReply(2719932, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @jin5354 的这条回复发送感谢？')) { thankReply(2719932, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('jin5354');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">145</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/jin5354" class="dark">jin5354</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:42:35 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">我错了，我不回了</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2719939" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2719939" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2719939, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2719939, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">146</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 19:45:21 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/jin5354">jin5354</a> 谢谢，本来经常在网上交流，这种网络上的随便用语比较多。
+<br>我觉得这种开放性的论坛开着玩笑说个醉了没什么问题，后来 5 楼表示不满，我就知道是误解， 6 楼随机给出解释，仍然还有人抓着小辫子不放，这些人他麻痹的放在文革绝对是顶尖的人物啊，真让我大开眼界了，真会做文章！！！别回了，没人回我也不回了，保重！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2720034" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/43973_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2720034" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @edsgerlin 的这条回复？')) { ignoreReply(2720034, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @edsgerlin 的这条回复发送感谢？')) { thankReply(2720034, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('edsgerlin');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">147</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/edsgerlin" class="dark">edsgerlin</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 20:45:20 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/yernsun">yernsun</a> 看你给的 URL 里的资料，实际情况好符合我根据 OP 行文所在脑内形成的 stereotype 呀。 LMAO</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2720062" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/d268abed55a3131c9690b3962a353325.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2720062" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @eliteYang 的这条回复？')) { ignoreReply(2720062, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @eliteYang 的这条回复发送感谢？')) { thankReply(2720062, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('eliteYang');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">148</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/eliteYang" class="dark">eliteYang</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 20:58:49 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">建议看下&lt;提问的智慧&gt;</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2720089" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/95448_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2720089" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @vCleaner 的这条回复？')) { ignoreReply(2720089, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @vCleaner 的这条回复发送感谢？')) { thankReply(2720089, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('vCleaner');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">149</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/vCleaner" class="dark">vCleaner</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 21:07:18 +08:00 via Android</span>  &nbsp; <span class="small fade">♥ 2</span>
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/Livid">Livid</a> This could be moved to <a target="_blank" href="https://www.v2ex.com/go/flamewar">/go/flamewar</a></div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2720161" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/69521_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2720161" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @happywowwow 的这条回复？')) { ignoreReply(2720161, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @happywowwow 的这条回复发送感谢？')) { thankReply(2720161, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('happywowwow');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">150</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/happywowwow" class="dark">happywowwow</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 21:40:48 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">情商低到一点就着 到哪里都不受人待见 还不自知 不自持 脏话连篇</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2720168" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/47344_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2720168" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @pynix 的这条回复？')) { ignoreReply(2720168, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @pynix 的这条回复发送感谢？')) { thankReply(2720168, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('pynix');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">151</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/pynix" class="dark">pynix</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-13 21:43:29 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">问题都描述不清楚。。</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2720704" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2720704" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2720704, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2720704, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">152</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-14 08:10:58 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/happywowwow">happywowwow</a>
+ 你们这群傻逼不是一点就着，你们是圣母的话一个个都他麻痹的有点圣母的样子，别他麻痹来你爹这装逼  
+装逼请滚你妈比远点装去，别来你爹这装秀你那优越感 你以为你活的比你爹好？操蛋玩意，自己撒泡尿平时照照自己镜子，是不是一天 24 小时 25 
+小时在装逼，受够了你们这些人了！！！
+<br>
+<br>
+<br>再加一句，大家都擦亮眼看着，我明显不想继续纠缠这些没营养的话题。 
+<br>希望不要有任何一个人再来进行评论！此话过后，没有任何一句好话，直接喷！ 
+<br>
+<br>你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎！
+<br>
+<br>@<a href="https://www.v2ex.com/member/eliteYang">eliteYang</a> 已经看了，会注意
+<br>
+<br>@<a href="https://www.v2ex.com/member/vCleaner">vCleaner</a> 谢谢提醒管理移动
+<br>
+<br>@<a href="https://www.v2ex.com/member/pynix">pynix</a> 一开始确实没怎么描述清楚</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2720707" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/97394_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2720707" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @amlion 的这条回复？')) { ignoreReply(2720707, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @amlion 的这条回复发送感谢？')) { thankReply(2720707, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('amlion');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">153</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/amlion" class="dark">amlion</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-14 08:15:48 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/happywowwow">happywowwow</a> 脏话连篇还不是你们这群圣母玛利亚逼出来的，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎！ 你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎，你他妈逼是瞎还是瞎！ 
+<br>看不惯的滚的远远地，你他麻痹不是圣母玛利亚吗？连个 block 都不会点你还高高在上你妈逼，活该骂你！</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2720993" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/104786_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2720993" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @Pastsong 的这条回复？')) { ignoreReply(2720993, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @Pastsong 的这条回复发送感谢？')) { thankReply(2720993, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('Pastsong');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">154</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/Pastsong" class="dark">Pastsong</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-14 10:00:31 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">帖子作为社区的公共资源社区会员如何回复是会员的自由。
+<br>
+<br>@<a href="https://www.v2ex.com/member/Livid">Livid</a> @<a href="https://www.v2ex.com/member/Kai">Kai</a> 
+<br>According to V2EX TOS, this account should be deactived.</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2722234" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/33940_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2722234" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @Niphor 的这条回复？')) { ignoreReply(2722234, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @Niphor 的这条回复发送感谢？')) { thankReply(2722234, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('Niphor');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">155</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/Niphor" class="dark">Niphor</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-14 15:14:47 +08:00</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">楼主这还刚学？ 这特么是没学吧？我也是醉了
+<br>
+<br>不过，超 2 页的帖子 难得啊</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+    
+        
+        
+        <div id="r_2723418" class="cell">
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody><tr>
+                <td width="48" valign="top" align="center"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/88717_normal.png" class="avatar" border="0" align="default"></td>
+                <td width="10" valign="top"></td>
+                <td width="auto" valign="top" align="left"><div class="fr"><div id="thank_area_2723418" class="thank_area"><a href="#;" onclick="if (confirm('确认要不再显示来自 @liwanglin12 的这条回复？')) { ignoreReply(2723418, '79336'); }" class="thank" style="color: #ccc;">隐藏</a> &nbsp; &nbsp; &nbsp; <a href="#;" onclick="if (confirm('确认花费 10 个铜币向 @liwanglin12 的这条回复发送感谢？')) { thankReply(2723418, 'wthnlgxykillqcsqkuslhwxrumxjgpjf'); }" class="thank">感谢回复者</a></div> &nbsp; <a href="#;" onclick="replyOne('liwanglin12');"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/reply.png" alt="Reply" border="0" align="absmiddle"></a> &nbsp;&nbsp; <span class="no">156</span></div>
+                    <div class="sep3"></div>
+                    <strong><a href="https://www.v2ex.com/member/liwanglin12" class="dark">liwanglin12</a></strong>&nbsp; &nbsp;<span class="ago">2015-12-14 20:24:18 +08:00 via Android</span> 
+                    <div class="sep5"></div>
+                    <div class="reply_content">@<a href="https://www.v2ex.com/member/juneszh">juneszh</a> 通过图灵测试了没系统？</div>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+    
+
+
+
+<div class="cell">
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tbody><tr>
+            <td width="92%" align="left"><a href="https://www.v2ex.com/t/243145?p=1" class="page_normal">1</a> &nbsp;<a href="https://www.v2ex.com/t/243145?p=2" class="page_current">2</a> &nbsp; <input class="page_input" autocomplete="off" value="2" min="1" max="2" onkeydown="if (event.keyCode == 13)
+                    location.href = '?p=' + this.value" type="number"></td>
+            <td width="8%" align="right">
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <style type="text/css">
+                        .disable_now {
+                            color: #ccc !important;
+                            background-color: #fff !important;
+                        }
+                        .hover_now {
+                            cursor: pointer;
+                            color: #333 !important;
+                            background-color: #f9f9f9 !important;
+                            text-shadow: 0px 1px 0px #fff !important;
+                        }
+                        .active_now {
+                            background-color: #e2e2e2 !important;
+                        }
+                    </style>
+                    <tbody><tr>
+                        <td class="super normal button" style="border-right: none; border-top-right-radius: 0px; border-bottom-right-radius: 0px;" onclick="location.href='?p=1';" onmouseover="$(this).addClass('hover_now');" onmousedown="$(this).addClass('active_now');" onmouseleave="$(this).removeClass('hover_now'); $(this).removeClass('active_now');" title="上一页" width="50%" align="center">❮</td>
+                        <td class="super normal_page_right button disable_now" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" width="50%" align="center">❯</td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+
+
+</div>
+<div class="sep20"></div>
+
+
+
+
+    
+<div class="box">
+    <div class="cell"><div class="fr"><a href="#" onclick="goTop()"><strong>↑</strong> 回到顶部</a></div>
+        添加一条新回复
+    </div>
+    <div class="cell"><form method="post" action="/t/243145">
+        <textarea name="content" maxlength="10000" class="mll" id="reply_content" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 112px;"></textarea>
+        <div class="sep10"></div>
+        <div class="fr"><div class="sep5"></div><span class="gray">请尽量让自己的回复能够对别人有帮助</span></div>
+        <input value="79336" name="once" type="hidden">
+        <input value="回复" class="super normal button" type="submit">
+        <script type="text/javascript">
+        $("#reply_content").on('input', function(e) {
+            saveReplyDraft(243145, 229946);
+        });
+
+        var keyPressed = 0;
+
+        $("#reply_content").keydown(function(e) {
+            keyPressed = keyPressed + 1;
+
+            if ((e.ctrlKey || e.metaKey) && e.which === 13) {
+                e.preventDefault();
+                $("#reply_content").parent().submit();
+            }
+        });
+        </script>
+        </form>
+    </div>
+    <div class="inner">
+        <div class="fr"><a href="https://www.v2ex.com/">← V2EX</a></div>
+        &nbsp;
+    </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            
+            
+        </div>
+        <div class="c"></div>
+        <div class="sep20"></div>
+    </div>
+    <div id="Bottom">
+        <div class="content">
+            <div class="inner">
+                <div class="sep10"></div>
+                    <div class="fr">
+                        <a href="https://www.digitalocean.com/?refcode=1b51f1a7651d" target="_blank"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/do_blue.png" alt="DigitalOcean" border="0" width="60"></a>
+                    </div>
+                    <strong><a href="https://www.v2ex.com/about" class="dark" target="_self">关于</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="https://www.v2ex.com/faq" class="dark" target="_self">FAQ</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="https://www.v2ex.com/p/7v9TEc53" class="dark" target="_self">API</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="https://www.v2ex.com/mission" class="dark" target="_self">我们的愿景</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="https://www.v2ex.com/advertise" class="dark" target="_self">广告投放</a> &nbsp; <span class="snow">·</span> &nbsp; <a href="https://www.v2ex.com/advertise/2016.html" class="dark" target="_self">鸣谢</a> &nbsp; <span class="snow">·</span> &nbsp; 2357 人在线</strong> &nbsp; <span class="fade">最高记录 3541</span> &nbsp; <span class="snow">·</span> &nbsp; <a href="https://www.v2ex.com/select/language"><img src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/lang_zhcn_32.png" alt="" border="0" width="20" align="absmiddle"></a>
+                    <div class="sep20"></div>
+                    创意工作者们的社区
+                    <div class="sep5"></div>
+                    World is powered by solitude
+                    <div class="sep20"></div>
+                    <span class="small fade">VERSION: 3.9.7.5 · 102ms · UTC 09:22 · PVG 17:22 · LAX 02:22 · JFK 05:22<br>♥ Do have faith in what you're doing.</span>
+                    <div class="sep20"></div>
+                    <span class="f12 gray"><a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">沪ICP备16043287号-1</a></span>
+                <div class="sep10"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    <script src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/FK01ZvB8m_OI_MaWMo_ueg_oJJ1vgSNsaWMhPcupy31dWIMq-bzFJ_6mgjNt.htm"></script>
+    
+
+    
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11940834-2', 'v2ex.com');
+	  ga('send', 'pageview');
+
+	</script>
+    
+
+    <script src="Phper%20%E9%97%A8%EF%BC%8C%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%BE%AA%E7%8E%AF%E9%9A%BE%E4%BD%8F%E4%BA%86%EF%BC%8C%20help%20me%EF%BC%81%EF%BC%81%EF%BC%81%20-%20V2EX_files/jquery.js" type="text/javascript"></script>
+    
+
+<textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px none; padding: 0px; box-sizing: content-box; overflow-wrap: break-word; height: 0px !important; min-height: 0px !important; overflow: hidden; transition: none 0s ease 0s ; font-family: &quot;Helvetica Neue&quot;,&quot;Luxi Sans&quot;,&quot;DejaVu Sans&quot;,Tahoma,&quot;Hiragino Sans GB&quot;,&quot;Microsoft Yahei&quot;,sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; line-height: 17px; width: 738px;" class="autosizejs" id="autosizejs">
+</textarea></body></html>

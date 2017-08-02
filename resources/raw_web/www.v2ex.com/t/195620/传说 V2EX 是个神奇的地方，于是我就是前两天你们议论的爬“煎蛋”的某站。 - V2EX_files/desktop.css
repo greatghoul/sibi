@@ -1,0 +1,41 @@
+body {
+    min-width: 820px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+}
+
+.topic_content img, .reply_content img {
+    max-width: 100% !important;
+}
+
+.editor_syntax {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.editor_syntax_label_left {
+    float: left;
+    margin-top: 7px;
+    margin-right: 7px;
+}
+
+.editor_syntax_label_right {
+    float: right;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+.sidebar_compliance {
+    background-color: #f2f2f2;
+    padding: 5px;
+    font-size: 10px;
+    color: #333;
+    line-height: 100%;
+}
