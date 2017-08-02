@@ -6,6 +6,27 @@
 
 ----
 
+Ruby China 对新手友好不友好？ (2017.07)
+
+- [我觉的 Ruby China 对新手不太友好](https://ruby-china.org/topics/33417)
+- [在学习 Rails 之后，有点想法想和大家分享一下](https://ruby-china.org/topics/33422)
+
+----
+
+少年黑客创业引发的撕逼大战 (2017.06)
+
+ - [曾经的少年黑客，准备创业了。你们怎么看？](https://www.v2ex.com/t/369422)
+ - [公布一个从事网络黑产、恶意骚扰别人的黑产大户](https://www.v2ex.com/t/369943)
+ 
+----
+
+培训班的争论 (2017.05)
+
+- [量产型炮灰工程师](https://ruby-china.org/topics/33036)
+- [全栈营感想](https://ruby-china.org/topics/31062)
+
+----
+
 关于知识付费的讨论 (2017.05)
 
 - [看完这几个人的经历，你还会提倡“知识付费”吗？](https://www.v2ex.com/t/360207)
@@ -350,6 +371,5 @@ V2EX投放广告退款事件 (2014.05)
 
  - [MBP免费送，国行全新，绝不标题党](https://www.v2ex.com/t/29091)
  - [关于这次的事件<免费赠送MBP>。一些详细的名词解析以及看起来很神秘的安全圈](https://www.v2ex.com/t/29352)
-
 
 [V2EX]: https://v2ex.com/
