@@ -4,6 +4,52 @@
 
 ![img](resources/img/9QjldBC2XrH5.jpeg)
 
+<!--
+关于备份页面的一点建议
+
+由于各种愿因，V2EX 有时会删除一部分贴子，虽然这种时候不多，但为了防止贴子删除所造成的不便，希望
+本项目的参与者可以顺手备份相关页面。
+
+备份方法：
+1. 如果该页面不登录仍能访问（测试方法，在浏览嚣中新开一个隐私模式窗口，在隐私模式中如能打开该页
+面，即符合本条要求），直接使用 [Internet Archive](https://archive.org/) 进行备份。
+把网页备份至 Internet Archive 的方法参见 http://www.bitsgalore.org/2014/08/02/How-to-save-a-web-page-to-the-Internet-Archive 。
+
+2. 如果该页面已不能直接访问，可将相关页面的 API 输出备份至 Internet Archive。
+
+使用到的 V2EX API 如下：
+显示主题内容：/api/topics/show.json?id=1
+获取主题的回复：/api/replies/show.json?topic_id=1
+
+举例说明，具体的备份过程。
+  1. 备份topic id 为 331037 的主题，经测试该页面无法直接访问。
+  2. 在浏览嚣中打开该主题的内容页面 https://www.v2ex.com/api/topics/show.json?id=331037 ，
+与该主题的回复页面 https://www.v2ex.com/api/replies/show.json?topic_id=331037 。
+  3. 将以上两个页面备份至 Internet Archive。
+
+3. 若该页面已不能直接访问，或因为 robots.txt 限制，archive.org 无法备份的页面。可打开相应页
+面后，使用浏览器的保存功能，将相应的页面保存至 resources/raw_web 目录下。
+
+保存目录的命名依据网页url确定，如 http://mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ 的
+内容保存至 resources/raw_web/mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ 目录下。
+
+使用此法保存 V2EX 页面时，请在隐私模式下，使用小号登录保存（保存的页面内含有当前登录账号的信息）。
+-->
+
+---
+
+piwik 中国地图问题引发的争吵 (2017.08)
+
+- [piwik 把西藏从中国分裂出去，看来很快又要寸草不生了](https://www.v2ex.com/t/379794)
+
+---
+
+UCloud 推广费事件 (2017.07)
+
+- [关于 UCloud 赖账的 10 万 推广费，想请大家评评理](https://www.v2ex.com/t/377051)
+- [UCloud 关于 Laravist 社区事件的说明](https://www.v2ex.com/t/377158)
+- [关于之前的一件事情对社区的回应](https://www.v2ex.com/t/379389)
+
 ----
 
 Ruby China 对新手友好不友好？ (2017.07)
@@ -17,7 +63,7 @@ Ruby China 对新手友好不友好？ (2017.07)
 
  - [曾经的少年黑客，准备创业了。你们怎么看？](https://www.v2ex.com/t/369422)
  - [公布一个从事网络黑产、恶意骚扰别人的黑产大户](https://www.v2ex.com/t/369943)
- 
+
 ----
 
 培训班的争论 (2017.05)
@@ -26,6 +72,12 @@ Ruby China 对新手友好不友好？ (2017.07)
 - [全栈营感想](https://ruby-china.org/topics/31062)
 
 ----
+
+怼 Livid 事件 (2017.05)
+
+- [Livid 进来看一下，我对你有意见！](https://www.v2ex.com/t/364214)
+
+---
 
 关于知识付费的讨论 (2017.05)
 
@@ -60,10 +112,10 @@ C 风格字符串与指针争论 (2017.05)
 
 就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者 (2017.02)
 
-- [就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者](http://mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ)<!-- 由于robots.txt限制，archive.org无法收录该页，为保存页面,故将该页保存截屏于`resources/raw_web/mp_weixin_qq_com/C5aDa0pzoUGk6_4q-qKCaQ` -->
+- [就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者](http://mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ)<!-- 由于robots.txt限制，archive.org无法收录该页，为保存页面,故将该页保存截屏于`resources/raw_web/mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ` -->
 - [续 就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者](https://www.v2ex.com/t/342559)
-- [作为除当事人外最有权力发言的人，谈谈《就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者》](http://mp.weixin.qq.com/s/KFw_cEb9Wt0QVjJInKINBA)<!-- 由于robots.txt限制，archive.org无法收录该页，为保存页面,故将该页保存截屏于`resources/raw_web/mp_weixin_qq_com/KFw_cEb9Wt0QVjJInKINBA` -->
-- [知情人士爆尿: 那个说自己老公一毛钱股份没拿到还觉得他最牛逼的谁 我真是大写加粗的呵呵哒了](http://mp.weixin.qq.com/s/es6yLwkNleHSQB7R5PF_JQ)<!-- 由于robots.txt限制，archive.org无法收录该页，为保存页面,故将该页保存截屏于`resources/raw_web/mp_weixin_qq_com/es6yLwkNleHSQB7R5PF_JQ` -->
+- [作为除当事人外最有权力发言的人，谈谈《就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者》](http://mp.weixin.qq.com/s/KFw_cEb9Wt0QVjJInKINBA)<!-- 由于robots.txt限制，archive.org无法收录该页，为保存页面,故将该页保存截屏于`resources/raw_web/mp.weixin.qq.com/s/es6yLwkNleHSQB7R5PF_JQ` -->
+- [知情人士爆尿: 那个说自己老公一毛钱股份没拿到还觉得他最牛逼的谁 我真是大写加粗的呵呵哒了](http://mp.weixin.qq.com/s/es6yLwkNleHSQB7R5PF_JQ)<!-- 由于robots.txt限制，archive.org无法收录该页，为保存页面,故将该页保存截屏于`resources/raw_web/mp.weixin.qq.com/s/KFw_cEb9Wt0QVjJInKINBA` -->
 - [怎么看《就算老公一毛钱股份都没拿到，在我心里，他依然是最牛逼的创业者》文中创业公司 CEO 的行为？](https://www.zhihu.com/question/56178614/answer/148217493)
 
 ----
