@@ -430,4 +430,14 @@ V2EX投放广告退款事件 (2014.05)
  - [MBP免费送，国行全新，绝不标题党](https://www.v2ex.com/t/29091)
  - [关于这次的事件<免费赠送MBP>。一些详细的名词解析以及看起来很神秘的安全圈](https://www.v2ex.com/t/29352)
 
+----
+
+V2EX 站长公布 Spammer 手机号码IP并封禁持反对意见的人 (2012.08)
+
+ - [关于 2018 年 3 月 31 日遇到的假毕业证书垃圾信息刷屏](https://www.v2ex.com/t/443087)
+ - [问一下有那些和 V2EX 相似用户群的论坛？](https://www.v2ex.com/t/443231)  
+    - 被移动到水深火热，Archive 链接
+        - http://archive.fo/piFNO
+        - http://archive.fo/TaShQ
+
 [V2EX]: https://v2ex.com/
