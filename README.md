@@ -36,6 +36,16 @@
 使用此法保存 V2EX 页面时，请在隐私模式下，使用小号登录保存（保存的页面内含有当前登录账号的信息）。
 -->
 
+----
+
+V2EX 站长公布 Spammer 手机号码IP并封禁持反对意见的人 (2018.04)
+
+ - [关于 2018 年 3 月 31 日遇到的假毕业证书垃圾信息刷屏](https://www.v2ex.com/t/443087)
+ - [问一下有那些和 V2EX 相似用户群的论坛？](https://www.v2ex.com/t/443231)  
+    - 被移动到水深火热，Archive 链接
+        - http://archive.fo/piFNO
+        - http://archive.fo/TaShQ
+
 ---
 
 V2 对于素食的看法 (2017.11)
@@ -430,14 +440,5 @@ V2EX投放广告退款事件 (2014.05)
  - [MBP免费送，国行全新，绝不标题党](https://www.v2ex.com/t/29091)
  - [关于这次的事件<免费赠送MBP>。一些详细的名词解析以及看起来很神秘的安全圈](https://www.v2ex.com/t/29352)
 
-----
-
-V2EX 站长公布 Spammer 手机号码IP并封禁持反对意见的人 (2018.04)
-
- - [关于 2018 年 3 月 31 日遇到的假毕业证书垃圾信息刷屏](https://www.v2ex.com/t/443087)
- - [问一下有那些和 V2EX 相似用户群的论坛？](https://www.v2ex.com/t/443231)  
-    - 被移动到水深火热，Archive 链接
-        - http://archive.fo/piFNO
-        - http://archive.fo/TaShQ
 
 [V2EX]: https://v2ex.com/
