@@ -1,40 +1,8 @@
 # V2EX 撕逼大战
 
-因为 [V2EX] 总是出现撕逼大战，所以专门开了这个 Repo 来收集这些帖子，但帖子的来源不限于 [V2EX]。
+因为 [V2EX] 总是出现撕逼大战，所以专门开了这个 Repo 来收集这些帖子，但帖子的来源不限于 [V2EX]，如果你有想添加的事件，可以参考[如何添加撕逼事件](https://github.com/greatghoul/sibi/wiki/%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E6%92%95%E9%80%BC%E4%BA%8B%E4%BB%B6) 或者在 [Issues](https://github.com/greatghoul/sibi/issues) 中提出。
 
 ![img](resources/img/9QjldBC2XrH5.jpeg)
-
-<!--
-关于备份页面的一点建议
-
-由于各种愿因，V2EX 有时会删除一部分贴子，虽然这种时候不多，但为了防止贴子删除所造成的不便，希望
-本项目的参与者可以顺手备份相关页面。
-
-备份方法：
-1. 如果该页面不登录仍能访问（测试方法，在浏览嚣中新开一个隐私模式窗口，在隐私模式中如能打开该页
-面，即符合本条要求），直接使用 [Internet Archive](https://archive.org/) 进行备份。
-把网页备份至 Internet Archive 的方法参见 http://www.bitsgalore.org/2014/08/02/How-to-save-a-web-page-to-the-Internet-Archive 。
-
-2. 如果该页面已不能直接访问，可将相关页面的 API 输出备份至 Internet Archive。
-
-使用到的 V2EX API 如下：
-显示主题内容：/api/topics/show.json?id=1
-获取主题的回复：/api/replies/show.json?topic_id=1
-
-举例说明，具体的备份过程。
-  1. 备份topic id 为 331037 的主题，经测试该页面无法直接访问。
-  2. 在浏览嚣中打开该主题的内容页面 https://www.v2ex.com/api/topics/show.json?id=331037 ，
-与该主题的回复页面 https://www.v2ex.com/api/replies/show.json?topic_id=331037 。
-  3. 将以上两个页面备份至 Internet Archive。
-
-3. 若该页面已不能直接访问，或因为 robots.txt 限制，archive.org 无法备份的页面。可打开相应页
-面后，使用浏览器的保存功能，将相应的页面保存至 resources/raw_web 目录下。
-
-保存目录的命名依据网页url确定，如 http://mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ 的
-内容保存至 resources/raw_web/mp.weixin.qq.com/s/C5aDa0pzoUGk6_4q-qKCaQ 目录下。
-
-使用此法保存 V2EX 页面时，请在隐私模式下，使用小号登录保存（保存的页面内含有当前登录账号的信息）。
--->
 
 ----
 
