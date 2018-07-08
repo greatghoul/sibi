@@ -41,6 +41,7 @@
 GFW 支持者与反对者互喷事件 (2018.06)
 
 - [github 又挂了我真是艹了 TG 的仙人了。](https://www.v2ex.com/t/465592?p=1)
+  | [存档](https://www.pdf-archive.com/2018/07/08/465592-github--tg-/)
 
 ----
 
