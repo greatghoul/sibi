@@ -6,6 +6,12 @@
 
 ----
 
+JavaScript是否要写分号 (2018.09)
+
+- [JS 不写分号会出 BUG 的。。。](https://www.v2ex.com/t/490730)
+
+----
+
 GFW 支持者与反对者互喷事件 (2018.06)
 
 - [github 又挂了我真是艹了 TG 的仙人了。](https://www.v2ex.com/t/465592?p=1)
