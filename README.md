@@ -6,6 +6,13 @@
 
 ----
 
+中医致癌撕逼事件 (2019.02)
+
+- [其实中国如果想在未来一代人身上大幅降低癌症发病率也很简单，做到以下几条就可以](https://www.v2ex.com/t/538109)
+  | [存档](https://github.com/greatghoul/sibi/issues/52)
+
+----
+
 JavaScript是否要写分号 (2018.09)
 
 - [JS 不写分号会出 BUG 的。。。](https://www.v2ex.com/t/490730)
